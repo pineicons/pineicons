@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M14.772 3H9.228a2 2 0 0 0-1.414.586L3.586 7.814A2 2 0 0 0 3 9.228v5.544a2 2 0 0 0 .586 1.414l4.228 4.228A2 2 0 0 0 9.228 21h5.544a2 2 0 0 0 1.414-.586l4.228-4.228A2 2 0 0 0 21 14.772V9.228a2 2 0 0 0-.586-1.414l-4.228-4.228A2 2 0 0 0 14.772 3Z"/>
+</svg>

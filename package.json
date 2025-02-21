@@ -1,0 +1,39 @@
+{
+  "name": "pineicons",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A set of free MIT-licensed high-quality SVG icons for UI development.",
+  "keywords": [
+    "icons",
+    "svg",
+    "tailwindcss"
+  ],
+  "repository": "https://github.com/pineicons/pineicons.git",
+  "files": [
+    "icons/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "node ./scripts/verify-names.js",
+    "prebuild": "rimraf ./{solid,outline,tinted} ./{vue,react}/{solid,outline,tinted} ./optimized/{solid,outline,tinted}",
+    "build": "npm run build-outline && npm run build-solid && npm run build-tinted && npm run build-react && npm run build-vue",
+    "build-react": "node ./scripts/build.js react",
+    "build-vue": "node ./scripts/build.js vue",
+    "build-outline": "rimraf ./icons/outline ./optimized/icons/outline && svgo --config=svgo.outline.mjs -f ./src/icons/outline -o ./optimized/icons/outline --pretty --indent=2 && mkdir -p ./icons && cp -R ./optimized/icons/outline ./icons/outline",
+    "build-solid": "rimraf ./icons/solid ./optimized/icons/solid && svgo --config=svgo.solid.mjs -f ./src/icons/solid -o ./optimized/icons/solid --pretty --indent=2 && mkdir -p ./icons && cp -R ./optimized/icons/solid ./icons/solid",
+    "build-tinted": "rimraf ./icons/tinted ./optimized/icons/tinted && svgo --config=svgo.tinted.mjs -f ./src/icons/tinted -o ./optimized/icons/tinted --pretty --indent=2 && mkdir -p ./icons && cp -R ./optimized/icons/tinted ./icons/tinted",
+    "release-channel": "node ./scripts/release-channel.js",
+    "release-notes": "node ./scripts/release-notes.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@svgr/core": "^5.5.0",
+    "@vue/compiler-dom": "^3.0.5",
+    "camelcase": "^6.0.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^3.0.2",
+    "svgo": "^3.0.2"
+  }
+}

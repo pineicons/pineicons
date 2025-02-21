@@ -1,0 +1,138 @@
+{
+  "name": "@pineicons/react",
+  "license": "MIT",
+  "version": "1.0.1",
+  "description": "A set of free MIT-licensed high-quality SVG icons for UI development.",
+  "keywords": [
+    "icons",
+    "svg",
+    "react"
+  ],
+  "homepage": "https://github.com/pineicons/pineicons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pineicons/pineicons.git"
+  },
+  "files": [
+    "icons",
+    "outline",
+    "solid",
+    "tinted",
+    "index.esm.js",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.esm.js",
+      "require": "./index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./outline": {
+      "default": "./outline/index.js"
+    },
+    "./outline/index": {
+      "default": "./outline/index.js"
+    },
+    "./outline/index.js": {
+      "default": "./outline/index.js"
+    },
+    "./solid": {
+      "default": "./solid/index.js"
+    },
+    "./solid/index": {
+      "default": "./solid/index.js"
+    },
+    "./solid/index.js": {
+      "default": "./solid/index.js"
+    },
+    "./tinted": {
+      "default": "./tinted/index.js"
+    },
+    "./tinted/index": {
+      "default": "./tinted/index.js"
+    },
+    "./tinted/index.js": {
+      "default": "./tinted/index.js"
+    },
+    "./icons/outline": {
+      "types": "./icons/outline/index.d.ts",
+      "import": "./icons/outline/esm/index.js",
+      "require": "./icons/outline/index.js"
+    },
+    "./icons/outline/*": {
+      "types": "./icons/outline/*.d.ts",
+      "import": "./icons/outline/esm/*.js",
+      "require": "./icons/outline/*.js"
+    },
+    "./icons/outline/*.js": {
+      "types": "./icons/outline/*.d.ts",
+      "import": "./icons/outline/esm/*.js",
+      "require": "./icons/outline/*.js"
+    },
+    "./icons/outline/esm/*": {
+      "types": "./icons/outline/*.d.ts",
+      "import": "./icons/outline/esm/*.js"
+    },
+    "./icons/outline/esm/*.js": {
+      "types": "./icons/outline/*.d.ts",
+      "import": "./icons/outline/esm/*.js"
+    },
+    "./icons/solid": {
+      "types": "./icons/solid/index.d.ts",
+      "import": "./icons/solid/esm/index.js",
+      "require": "./icons/solid/index.js"
+    },
+    "./icons/solid/*": {
+      "types": "./icons/solid/*.d.ts",
+      "import": "./icons/solid/esm/*.js",
+      "require": "./icons/solid/*.js"
+    },
+    "./icons/solid/*.js": {
+      "types": "./icons/solid/*.d.ts",
+      "import": "./icons/solid/esm/*.js",
+      "require": "./icons/solid/*.js"
+    },
+    "./icons/solid/esm/*": {
+      "types": "./icons/solid/*.d.ts",
+      "import": "./icons/solid/esm/*.js"
+    },
+    "./icons/solid/esm/*.js": {
+      "types": "./icons/solid/*.d.ts",
+      "import": "./icons/solid/esm/*.js"
+    },
+    "./icons/tinted": {
+      "types": "./icons/tinted/index.d.ts",
+      "import": "./icons/tinted/esm/index.js",
+      "require": "./icons/tinted/index.js"
+    },
+    "./icons/tinted/*": {
+      "types": "./icons/tinted/*.d.ts",
+      "import": "./icons/tinted/esm/*.js",
+      "require": "./icons/tinted/*.js"
+    },
+    "./icons/tinted/*.js": {
+      "types": "./icons/tinted/*.d.ts",
+      "import": "./icons/tinted/esm/*.js",
+      "require": "./icons/tinted/*.js"
+    },
+    "./icons/tinted/esm/*": {
+      "types": "./icons/tinted/*.d.ts",
+      "import": "./icons/tinted/esm/*.js"
+    },
+    "./icons/tinted/esm/*.js": {
+      "types": "./icons/tinted/*.d.ts",
+      "import": "./icons/tinted/esm/*.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">= 16 || ^19.0.0-rc"
+  }
+}
