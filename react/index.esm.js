@@ -9,7 +9,7 @@ export default new Proxy(
       }
 
       throw new Error(
-        `Importing from \`@pineicons/react\` directly is not supported. Please import from either \`@pineicons/react/icons/solid\`, \`@pineicons/react/icons/outline\`, or \`@pineicons/react/icons/tinted\` instead.`
+        `Importing from \`@pine-icons/react\` directly is not supported. Please import from either \`@pine-icons/react/icons/solid\`, \`@pine-icons/react/icons/outline\`, or \`@pine-icons/react/icons/tinted\` instead.`
       );
     },
   }

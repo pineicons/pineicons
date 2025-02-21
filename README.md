@@ -6,7 +6,7 @@ Beautifully hand-crafted SVG icons designed to enhance your web applications wit
 
 [![Latest Release](https://img.shields.io/npm/v/pineicons)](https://github.com/pineicons/pineicons/releases)
 [![License](https://img.shields.io/npm/l/pineicons.svg)](https://github.com/pineicons/pineicons/blob/master/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/@pineicons/react)](https://www.npmjs.com/package/@pineicons/react)
+[![Downloads](https://img.shields.io/npm/dm/@pine-icons/react)](https://www.npmjs.com/package/@pine-icons/react)
 [![GitHub Stars](https://img.shields.io/github/stars/pineicons/pineicons)](https://github.com/pineicons/pineicons)
 
 ## Table of Contents
@@ -32,7 +32,7 @@ Before installing Pineicons, ensure you have [Node.js](https://nodejs.org/) and 
 To install the React library, run:
 
 ```sh
-npm install @pineicons/react
+npm install @pine-icons/react
 ```
 
 ### Vue
@@ -40,7 +40,7 @@ npm install @pineicons/react
 To install the Vue library, run:
 
 ```sh
-npm install @pineicons/vue
+npm install @pine-icons/vue
 ```
 
 ## Basic Usage
@@ -60,7 +60,7 @@ Icons (outline and solid) are styled using the color CSS property (e.g., text-gr
 Import icons individually as React components to minimize bundle size. Example with HomeIcon:
 
 ```jsx
-import { HomeIcon } from "@pineicons/react/24/solid";
+import { HomeIcon } from "@pine-icons/react/24/solid";
 
 function MyComponent() {
   return (
@@ -75,7 +75,7 @@ function MyComponent() {
 ### Button Example
 
 ```jsx
-import { HomeIcon } from "@pineicons/react/24/solid";
+import { HomeIcon } from "@pine-icons/react/24/solid";
 
 function MyButton() {
   return (
@@ -100,7 +100,7 @@ Import icons as Vue components. Example with HomeIcon:
 </template>
 
 <script setup>
-import { HomeIcon } from "@pineicons/vue/24/solid";
+import { HomeIcon } from "@pine-icons/vue/24/solid";
 </script>
 ```
 
@@ -115,7 +115,7 @@ import { HomeIcon } from "@pineicons/vue/24/solid";
 </template>
 
 <script setup>
-import { HomeIcon } from "@pineicons/vue/24/solid";
+import { HomeIcon } from "@pine-icons/vue/24/solid";
 </script>
 ```
 
@@ -124,17 +124,17 @@ import { HomeIcon } from "@pineicons/vue/24/solid";
 Pineicons are available in multiple sizes and styles:
 
 - 16x16 solid:
-  - React: `@pineicons/react/16/solid`
-  - Vue: `@pineicons/vue/16/solid`
+  - React: `@pine-icons/react/16/solid`
+  - Vue: `@pine-icons/vue/16/solid`
 - 20x20 solid:
-  - React: `@pineicons/react/20/solid`
-  - Vue: `@pineicons/vue/20/solid`
+  - React: `@pine-icons/react/20/solid`
+  - Vue: `@pine-icons/vue/20/solid`
 - 24x24 outline:
-  - React: `@pineicons/react/24/outline`
-  - Vue: `@pineicons/vue/24/outline`
+  - React: `@pine-icons/react/24/outline`
+  - Vue: `@pine-icons/vue/24/outline`
 - 24x24 solid:
-  - React: `@pineicons/react/24/solid`
-  - Vue: `@pineicons/vue/24/solid`
+  - React: `@pine-icons/react/24/solid`
+  - Vue: `@pine-icons/vue/24/solid`
 
 ## Icon Naming Convention
 
@@ -194,7 +194,7 @@ Add effects with CSS:
 ### React Button
 
 ```jsx
-import { HomeIcon } from "@pineicons/react/24/solid";
+import { HomeIcon } from "@pine-icons/react/24/solid";
 
 function MyButton() {
   return (
@@ -219,7 +219,7 @@ function MyButton() {
 </template>
 
 <script setup>
-import { CheckIcon } from "@pineicons/vue/20/solid";
+import { CheckIcon } from "@pine-icons/vue/20/solid";
 const items = [
   { id: 1, text: "Item 1" },
   { id: 2, text: "Item 2" },

@@ -9,7 +9,7 @@ module.exports = new Proxy(
       }
 
       throw new Error(
-        `Importing from \`@pineicons/vue\` directly is not supported. Please import from either \`@pineicons/vue/icons/solid\`, \`@pineicons/vue/icons/outline\`, or \`@pineicons/vue/icons/tinted\` instead.`
+        `Importing from \`@pine-icons/vue\` directly is not supported. Please import from either \`@pine-icons/vue/icons/solid\`, \`@pine-icons/vue/icons/outline\`, or \`@pine-icons/vue/icons/tinted\` instead.`
       );
     },
   }
