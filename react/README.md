@@ -4,10 +4,10 @@ Beautifully hand-crafted React SVG icons designed to enhance your web applicatio
 
 [**Browse all icons at pineicons.com →**](https://pineicons.com)
 
-[![Latest Release](https://img.shields.io/npm/v/@pine-icons/react)](https://github.com/pine-icons/pine-icons/releases)
-[![License](https://img.shields.io/npm/l/@pine-icons/react.svg)](https://github.com/pine-icons/pine-icons/blob/master/LICENSE)
+[![Latest Release](https://img.shields.io/npm/v/@pine-icons/react)](https://github.com/pineicons/pineicons/releases)
+[![License](https://img.shields.io/npm/l/@pine-icons/react.svg)](https://github.com/pineicons/pineicons/blob/master/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/@pine-icons/react)](https://www.npmjs.com/package/@pine-icons/react)
-[![GitHub Stars](https://img.shields.io/github/stars/pine-icons/pine-icons)](https://github.com/pine-icons/pine-icons)
+[![GitHub Stars](https://img.shields.io/github/stars/pineicons/pineicons)](https://github.com/pineicons/pineicons)
 
 ## Table of Contents
 
