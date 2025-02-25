@@ -1,3 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-  <path d="M20 10v.75h.75V10zM4 10h-.75v.75H4zm8 11.75a.75.75 0 0 0 0-1.5zM19.25 13a.75.75 0 0 0 1.5 0zm-2.5-10a.75.75 0 0 0-1.5 0zm-1.5 4a.75.75 0 0 0 1.5 0zm-6.5-4a.75.75 0 0 0-1.5 0zm-1.5 4a.75.75 0 0 0 1.5 0zm7.27 10.682a.75.75 0 1 0-1.04 1.08zM15.846 20l-.52.54c.29.28.75.28 1.04 0zm4.674-3.46a.75.75 0 1 0-1.04-1.08zM7 5.75h10v-1.5H7zM19.25 8v2h1.5V8zM20 9.25H4v1.5h16zM4.75 10V8h-1.5v2zM17 5.75A2.25 2.25 0 0 1 19.25 8h1.5A3.75 3.75 0 0 0 17 4.25zM7 4.25A3.75 3.75 0 0 0 3.25 8h1.5A2.25 2.25 0 0 1 7 5.75zM4.75 18V8h-1.5v10zM7 21.75h5v-1.5H7zM19.25 8v5h1.5V8zm-16 10A3.75 3.75 0 0 0 7 21.75v-1.5A2.25 2.25 0 0 1 4.75 18zm12-15v4h1.5V3zm-8 0v4h1.5V3zm6.23 15.762 1.846 1.778 1.04-1.08-1.846-1.778zm2.886 1.778 4.154-4-1.04-1.08-4.154 4z"/>
+  <path stroke-linecap="round" d="M16 3v4M8 3v4"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14 18.222 15.846 20 20 16"/>
+  <path stroke-linecap="round" d="M20 8v2H4V8m16 0a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3m16 0v5M4 8v10a3 3 0 0 0 3 3h5"/>
 </svg>

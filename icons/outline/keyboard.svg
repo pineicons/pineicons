@@ -1,3 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-  <path d="M5.85 10.625a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm.3 2.677a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm2.1.01a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm2.1.01a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm-6.9-2.657a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm2.1.01a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm2.1.01a.75.75 0 0 0 1.5 0zm1.5-.01a.75.75 0 0 0-1.5 0zm-10.8.01v-.01h-1.5v.01zm1.8 2.667v-.01h-1.5v.01zm3.6 0v-.01h-1.5v.01zm3.6 0v-.01h-1.5v.01zm-5.4-2.667v-.01h-1.5v.01zm3.6 0v-.01h-1.5v.01zm3.6 0v-.01h-1.5v.01zM5.7 7.25h12.6v-1.5H5.7zm14.55 2v5.5h1.5v-5.5zm-1.95 7.5H5.7v1.5h12.6zm-14.55-2v-5.5h-1.5v5.5zm1.95 2c-1.064 0-1.95-.882-1.95-2h-1.5c0 1.92 1.532 3.5 3.45 3.5zm14.55-2c0 1.118-.886 2-1.95 2v1.5c1.918 0 3.45-1.58 3.45-3.5zm-1.95-7.5c1.064 0 1.95.882 1.95 2h1.5c0-1.92-1.532-3.5-3.45-3.5zM5.7 5.75c-1.918 0-3.45 1.58-3.45 3.5h1.5c0-1.118.886-2 1.95-2z"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10 8h.01M12 12h.01M14 8h.01M16 12h.01M18 8h.01M6 8h.01"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M7 16h10"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/>
 </svg>
