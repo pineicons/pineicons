@@ -70,7 +70,7 @@ async function getIcons(style) {
       svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
       componentName: `${camelcase(file.replace(/\.svg$/, ""), {
         pascalCase: true,
-      })}Icon`,
+      })}`,
       isDeprecated: deprecated.includes(file),
     }))
   );

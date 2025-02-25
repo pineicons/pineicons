@@ -57,15 +57,15 @@ Icons (outline and solid) are styled using the color CSS property (e.g., text-gr
 
 ## React Usage
 
-Import icons individually as React components to minimize bundle size. Example with HomeIcon:
+Import icons individually as React components to minimize bundle size. Example with Home:
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/solid";
+import { Home } from "@pine-icons/react/24/solid";
 
 function MyComponent() {
   return (
     <div>
-      <HomeIcon className="size-6 text-blue-500" />
+      <Home className="size-6 text-blue-500" />
       <p>Explore science</p>
     </div>
   );
@@ -75,12 +75,12 @@ function MyComponent() {
 ### Button Example
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/solid";
+import { Home } from "@pine-icons/react/24/solid";
 
 function MyButton() {
   return (
     <button className="flex items-center space-x-2">
-      <HomeIcon className="size-6 text-blue-500" />
+      <Home className="size-6 text-blue-500" />
       <span>Click me</span>
     </button>
   );
@@ -89,18 +89,18 @@ function MyButton() {
 
 ## Vue Usage
 
-Import icons as Vue components. Example with HomeIcon:
+Import icons as Vue components. Example with Home:
 
 ```vue
 <template>
   <div>
-    <HomeIcon class="size-6 text-blue-500" />
+    <Home class="size-6 text-blue-500" />
     <p>Explore science</p>
   </div>
 </template>
 
 <script setup>
-import { HomeIcon } from "@pine-icons/vue/24/solid";
+import { Home } from "@pine-icons/vue/24/solid";
 </script>
 ```
 
@@ -109,13 +109,13 @@ import { HomeIcon } from "@pine-icons/vue/24/solid";
 ```vue
 <template>
   <div class="card flex items-center space-x-2">
-    <HomeIcon class="size-6 text-blue-500" />
+    <Home class="size-6 text-blue-500" />
     <p>Card content goes here</p>
   </div>
 </template>
 
 <script setup>
-import { HomeIcon } from "@pine-icons/vue/24/solid";
+import { Home } from "@pine-icons/vue/24/solid";
 </script>
 ```
 
@@ -138,7 +138,7 @@ Pineicons are available in multiple sizes and styles:
 
 ## Icon Naming Convention
 
-Icons use upper camel case with an Icon suffix (e.g., HomeIcon). Browse icon names on UNPKG:
+Icons use upper camel case naming (e.g., Home). Browse icon names on UNPKG:
 
 - [React (24x24 outline)]()
 - [Vue (24x24 outline)]()
@@ -194,12 +194,12 @@ Add effects with CSS:
 ### React Button
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/solid";
+import { Home } from "@pine-icons/react/24/solid";
 
 function MyButton() {
   return (
     <button className="flex items-center space-x-2">
-      <HomeIcon className="size-6 text-blue-500" />
+      <Home className="size-6 text-blue-500" />
       <span>Click me</span>
     </button>
   );
@@ -212,14 +212,14 @@ function MyButton() {
 <template>
   <ul>
     <li v-for="item in items" :key="item.id" class="flex items-center space-x-2">
-      <CheckIcon class="size-5 text-green-500" />
+      <Check class="size-5 text-green-500" />
       <span>{{ item.text }}</span>
     </li>
   </ul>
 </template>
 
 <script setup>
-import { CheckIcon } from "@pine-icons/vue/20/solid";
+import { Check } from "@pine-icons/vue/20/solid";
 const items = [
   { id: 1, text: "Item 1" },
   { id: 2, text: "Item 2" },

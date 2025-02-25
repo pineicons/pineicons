@@ -32,39 +32,37 @@ npm install @pine-icons/react
 Import icons individually as React components to minimize bundle size:
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/solid";
+import { Home } from "@pine-icons/react/icons/solid";
 
 function MyComponent() {
   return (
     <div>
-      <HomeIcon className="h-6 w-6 text-blue-500" />
+      <Home className="h-6 w-6 text-blue-500" />
       <p>Explore science</p>
     </div>
   );
 }
 ```
 
-Each icon can be imported from its respective size and style directory. Pine Icons work seamlessly with Tailwind CSS classes for styling.
+Each icon can be imported from its respective style directory. Pine Icons work seamlessly with Tailwind CSS classes for styling.
 
 ## Icon Sizes and Styles
 
-Pine Icons are available in multiple sizes and styles:
+Pine Icons are available in multiple styles:
 
-- 16x16 solid: `@pine-icons/react/16/solid`
-- 20x20 solid: `@pine-icons/react/20/solid`
-- 24x24 outline: `@pine-icons/react/24/outline`
-- 24x24 solid: `@pine-icons/react/24/solid`
+- Outline icons: `@pine-icons/react/icons/outline`
+- Solid icons: `@pine-icons/react/icons/solid`
 
-Choose the appropriate import path based on your desired size and style.
+Choose the appropriate import path based on your desired style.
 
 ## Icon Naming Convention
 
-Icons follow upper camel case naming with an Icon suffix:
+Icons follow upper camel case naming:
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/solid";
-import { ArrowRightIcon } from "@pine-icons/react/20/solid";
-import { UserCircleIcon } from "@pine-icons/react/24/outline";
+import { Home } from "@pine-icons/react/icons/solid";
+import { ArrowRight } from "@pine-icons/react/icons/solid";
+import { UserCircle } from "@pine-icons/react/icons/outline";
 ```
 
 ## Accessibility
@@ -73,7 +71,7 @@ Pine Icons components accept standard HTML attributes including ARIA attributes:
 
 ```jsx
 function AccessibleIcon() {
-  return <HomeIcon className="h-6 w-6 text-blue-500" aria-label="Science experiment" role="img" />;
+  return <Home className="h-6 w-6 text-blue-500" aria-label="Science experiment" role="img" />;
 }
 ```
 
@@ -81,7 +79,7 @@ For decorative icons, set `aria-hidden="true"`:
 
 ```jsx
 function DecorativeIcon() {
-  return <HomeIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />;
+  return <Home className="h-6 w-6 text-blue-500" aria-hidden="true" />;
 }
 ```
 
@@ -93,10 +91,10 @@ Use Tailwind CSS classes or standard CSS to customize icons:
 
 ```jsx
 // With Tailwind CSS
-<HomeIcon className="h-6 w-6 text-blue-500 hover:text-blue-600" />
+<Home className="h-6 w-6 text-blue-500 hover:text-blue-600" />
 
 // With standard CSS
-<HomeIcon className="icon-custom" />
+<Home className="icon-custom" />
 ```
 
 ```css
@@ -116,7 +114,7 @@ Use Tailwind CSS classes or standard CSS to customize icons:
 Apply transformations and effects:
 
 ```jsx
-<HomeIcon className="h-8 w-8 text-purple-600 transform rotate-45 transition-all duration-300 hover:scale-110" />
+<Home className="h-8 w-8 text-purple-600 transform rotate-45 transition-all duration-300 hover:scale-110" />
 ```
 
 ## Examples
@@ -124,13 +122,13 @@ Apply transformations and effects:
 ### Button with Icon
 
 ```jsx
-import { ArrowRightIcon } from "@pine-icons/react/20/solid";
+import { ArrowRight } from "@pine-icons/react/icons/solid";
 
 function Button() {
   return (
     <button className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
       <span>Next</span>
-      <ArrowRightIcon className="h-5 w-5" />
+      <ArrowRight className="h-5 w-5" />
     </button>
   );
 }
@@ -139,12 +137,12 @@ function Button() {
 ### Navigation Item
 
 ```jsx
-import { HomeIcon } from "@pine-icons/react/24/outline";
+import { Home } from "@pine-icons/react/icons/outline";
 
 function NavItem() {
   return (
     <a href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
-      <HomeIcon className="h-6 w-6" />
+      <Home className="h-6 w-6" />
       <span>Home</span>
     </a>
   );
@@ -154,14 +152,14 @@ function NavItem() {
 ### Loading State
 
 ```jsx
-import { SpinnerIcon } from "@pine-icons/react/24/outline";
+import { Spinner } from "@pine-icons/react/icons/outline";
 
 function LoadingButton({ isLoading }) {
   return (
     <button disabled={isLoading} className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg">
       {isLoading ? (
         <>
-          <SpinnerIcon className="h-5 w-5 animate-spin" />
+          <Spinner className="h-5 w-5 animate-spin" />
           <span>Loading...</span>
         </>
       ) : (
@@ -175,7 +173,7 @@ function LoadingButton({ isLoading }) {
 ### List with Icons
 
 ```jsx
-import { CheckCircleIcon } from "@pine-icons/react/20/solid";
+import { CheckCircle } from "@pine-icons/react/icons/solid";
 
 function FeatureList() {
   const features = ["Easy integration", "Customizable styles", "Accessibility support"];
@@ -184,7 +182,7 @@ function FeatureList() {
     <ul className="space-y-2">
       {features.map((feature) => (
         <li key={feature} className="flex items-center space-x-2">
-          <CheckCircleIcon className="h-5 w-5 text-green-500" />
+          <CheckCircle className="h-5 w-5 text-green-500" />
           <span>{feature}</span>
         </li>
       ))}
