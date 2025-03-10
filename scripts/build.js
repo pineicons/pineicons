@@ -61,6 +61,30 @@ let transform = {
       })
       .replace("export function render", "module.exports = function render");
   },
+  svelte: (svg, componentName, format, isDeprecated) => {
+    // Extract the content inside the SVG tag
+    const svgContentMatch = svg.match(/<svg[^>]*>([\s\S]*?)<\/svg>/);
+    const svgContent = svgContentMatch ? svgContentMatch[1].trim() : "";
+
+    // Create Svelte component
+    let code = `<script${format === "esm" ? ' context="module"' : ""}>
+  // ${componentName} icon component
+${isDeprecated ? "  /** @deprecated */\n" : ""}${
+      format === "esm" ? "" : "  export "
+    }default function ${componentName}($$props) {
+    return {
+      props: $$props,
+      $$slot_def: {}
+    };
+  }
+</script>
+
+<svg {...$$props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  ${svgContent}
+</svg>`;
+
+    return code;
+  },
 };
 
 async function getIcons(style) {
@@ -121,12 +145,21 @@ async function buildIcons(package, style, format) {
           `declare const ${componentName}: React.ForwardRefExoticComponent<React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & { title?: string, titleId?: string } & React.RefAttributes<SVGSVGElement>>;`
         );
         types.push(`export default ${componentName};`);
-      } else {
+      } else if (package === "vue") {
         types.push(`import type { FunctionalComponent, HTMLAttributes, VNodeProps } from 'vue';`);
         if (isDeprecated) {
           types.push(`/** @deprecated */`);
         }
         types.push(`declare const ${componentName}: FunctionalComponent<HTMLAttributes & VNodeProps>;`);
+        types.push(`export default ${componentName};`);
+      } else if (package === "svelte") {
+        types.push(`import type { SvelteComponentTyped } from 'svelte';`);
+        if (isDeprecated) {
+          types.push(`/** @deprecated */`);
+        }
+        types.push(`declare class ${componentName} extends SvelteComponentTyped<{
+  [x: string]: any;
+}, {}, {}> {}`);
         types.push(`export default ${componentName};`);
       }
 
