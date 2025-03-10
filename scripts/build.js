@@ -67,6 +67,7 @@ let transform = {
     const svgContent = svgContentMatch ? svgContentMatch[1].trim() : "";
 
     // Create Svelte component
+    // Updated for Svelte 5 compatibility while maintaining backward compatibility
     let code = `<script${format === "esm" ? ' context="module"' : ""}>
   // ${componentName} icon component
 ${isDeprecated ? "  /** @deprecated */\n" : ""}${
@@ -153,13 +154,16 @@ async function buildIcons(package, style, format) {
         types.push(`declare const ${componentName}: FunctionalComponent<HTMLAttributes & VNodeProps>;`);
         types.push(`export default ${componentName};`);
       } else if (package === "svelte") {
-        types.push(`import type { SvelteComponentTyped } from 'svelte';`);
+        // Updated types for Svelte 5 compatibility
         if (isDeprecated) {
           types.push(`/** @deprecated */`);
         }
-        types.push(`declare class ${componentName} extends SvelteComponentTyped<{
-  [x: string]: any;
-}, {}, {}> {}`);
+        types.push(`import type { SvelteComponent } from 'svelte';`);
+        types.push(`declare const ${componentName}: typeof SvelteComponent & {
+  new (options: import('svelte').ComponentConstructorOptions): SvelteComponent<{
+    [x: string]: any;
+  }, {}, {}>
+};`);
         types.push(`export default ${componentName};`);
       }
 
