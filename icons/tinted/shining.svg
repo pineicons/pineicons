@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-  <circle cx="12" cy="7" r="2" fill="color(display-p3 .7686 .8941 .3373)"/>
-  <path stroke-linejoin="round" d="m12 3 2.292 5.613a2 2 0 0 0 1.095 1.095L21 12l-5.613 2.292a2 2 0 0 0-1.095 1.095L12 21l-2.292-5.613a2 2 0 0 0-1.095-1.095L3 12l5.613-2.292a2 2 0 0 0 1.095-1.095z"/>
-</svg>
