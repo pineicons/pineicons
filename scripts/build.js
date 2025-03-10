@@ -33,6 +33,65 @@ let transform = {
       .replace('import * as React from "react"', 'const React = require("react")')
       .replace("export default", "module.exports =");
   },
+  "react-native": async (svg, componentName, format, isDeprecated) => {
+    // Modify SVG to use react-native-svg components
+    svg = svg
+      .replace(/<svg([^>]*)>/, (match, attrs) => {
+        // Extract viewBox and other needed attributes
+        const viewBoxMatch = attrs.match(/viewBox="([^"]*)"/);
+        const viewBox = viewBoxMatch ? viewBoxMatch[1] : "0 0 24 24";
+        return `<Svg width={size} height={size} viewBox="${viewBox}" fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap={strokeLinecap} strokeLinejoin={strokeLinejoin} {...props}>`;
+      })
+      .replace(/<\/svg>/, "</Svg>")
+      .replace(/<path/g, "<Path")
+      .replace(/<\/path>/g, "</Path>")
+      .replace(/<circle/g, "<Circle")
+      .replace(/<\/circle>/g, "</Circle>")
+      .replace(/<rect/g, "<Rect")
+      .replace(/<\/rect>/g, "</Rect>")
+      .replace(/<line/g, "<Line")
+      .replace(/<\/line>/g, "</Line>")
+      .replace(/<polyline/g, "<Polyline")
+      .replace(/<\/polyline>/g, "</Polyline>")
+      .replace(/<polygon/g, "<Polygon")
+      .replace(/<\/polygon>/g, "</Polygon>")
+      .replace(/<ellipse/g, "<Ellipse")
+      .replace(/<\/ellipse>/g, "</Ellipse>")
+      .replace(/stroke="currentColor"/g, "stroke={color}")
+      .replace(/fill="currentColor"/g, "fill={color}")
+      .replace(/stroke-width="([^"]*)"/g, (_, width) => `strokeWidth={strokeWidth}`);
+
+    // Create the component
+    let code = `import * as React from "react";
+import { Svg, Path, Circle, Rect, Line, Polyline, Polygon, Ellipse } from "react-native-svg";
+
+${isDeprecated ? "/** @deprecated */\n" : ""}const ${componentName} = React.forwardRef(({
+  color = "currentColor",
+  size = 24,
+  strokeWidth = 1.5,
+  strokeLinecap = "round",
+  strokeLinejoin = "round",
+  ...props
+}, ref) => (
+  ${svg}
+));
+
+${componentName}.displayName = "${componentName}";
+
+export default ${componentName};
+`;
+
+    if (format === "esm") {
+      return code;
+    }
+    return code
+      .replace('import * as React from "react"', 'const React = require("react")')
+      .replace(
+        'import { Svg, Path, Circle, Rect, Line, Polyline, Polygon, Ellipse } from "react-native-svg"',
+        'const { Svg, Path, Circle, Rect, Line, Polyline, Polygon, Ellipse } = require("react-native-svg")'
+      )
+      .replace("export default", "module.exports =");
+  },
   vue: (svg, componentName, format, isDeprecated) => {
     let { code } = compileVue(svg, {
       mode: "module",
@@ -144,6 +203,22 @@ async function buildIcons(package, style, format) {
         }
         types.push(
           `declare const ${componentName}: React.ForwardRefExoticComponent<React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & { title?: string, titleId?: string } & React.RefAttributes<SVGSVGElement>>;`
+        );
+        types.push(`export default ${componentName};`);
+      } else if (package === "react-native") {
+        types.push(`import * as React from 'react';`);
+        if (isDeprecated) {
+          types.push(`/** @deprecated */`);
+        }
+        types.push(
+          `declare const ${componentName}: React.ForwardRefExoticComponent<{
+    color?: string;
+    size?: number;
+    strokeWidth?: number;
+    strokeLinecap?: string;
+    strokeLinejoin?: string;
+    [key: string]: any;
+  } & React.RefAttributes<SVGSVGElement>>;`
         );
         types.push(`export default ${componentName};`);
       } else if (package === "vue") {
